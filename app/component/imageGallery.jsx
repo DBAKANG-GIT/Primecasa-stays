@@ -22,14 +22,14 @@ export default function ImageGallery() {
                         {/* Column 1 */}
                         <div className="flex flex-col gap-2">
                             <div className="flex flex-col gap-2 items-end">
-                                <div className="overflow-hidden  w-1/2 rounded-lg border border-amber-200">
+                                <div className="overflow-hidden  w-1/2 rounded-lg ">
                                     <img
                                         src="/images/image1.png"
                                         alt="Building exterior view"
                                         className=" md:max-w-[180px] h-auto object-cover"
                                     />
                                 </div>
-                                <div className="overflow-hidden w-1/2  rounded-lg border border-amber-200">
+                                <div className="overflow-hidden w-1/2  rounded-lg ">
                                     <img
                                         src="/images/image2.png"
                                         alt="Building architecture"
@@ -37,7 +37,7 @@ export default function ImageGallery() {
                                     />
                                 </div>
                             </div>
-                            <div className="overflow-hidden item-end flex rounded-lg border border-amber-200">
+                            <div className="overflow-hidden item-end flex rounded-lg ">
                                 <img
                                     src="/images/image4.png"
                                     alt="Living room with blue sofa"
@@ -48,14 +48,14 @@ export default function ImageGallery() {
 
                         {/* Column 2 */}
                         <div className="flex flex-col gap-2 h-full">
-                            <div className="overflow-hidden rounded-lg border border-amber-200">
+                            <div className="overflow-hidden rounded-lg ">
                                 <img
                                     src="/images/image3.png"
                                     alt="Luxury room interior"
                                     className="w-full h-[12rem] sm:h-[16rem] md:h-[20rem] lg:h-[30rem] object-cover"
                                 />
                             </div>
-                            <div className="overflow-hidden rounded-lg border border-amber-200 flex-1">
+                            <div className="overflow-hidden rounded-lg  flex-1">
                                 <img
                                     src="/images/image5.png"
                                     alt="Modern living space"
