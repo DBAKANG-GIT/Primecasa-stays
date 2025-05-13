@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Button from "../component/atom/Button"
+import Button from "../component/ui/Button"
 export default function LandlordsPage() {
   return (
     <main className="min-h-screen bg-white">
@@ -16,7 +16,7 @@ export default function LandlordsPage() {
           </div>
           <div className="order-first lg:w-[43vw] md:order-last">
             <Image
-              src="/images/land1.png"
+              src="/images/land1.webp"
               alt="Suburban houses"
               width={600}
               height={400}
@@ -33,7 +33,7 @@ export default function LandlordsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="order-last p-6 md:order-first">
                 <Image
-              src="/images/land2.png"
+              src="/images/land2.webp"
                   alt="Well-maintained interior"
                   width={600}
                   height={400}
@@ -72,7 +72,7 @@ export default function LandlordsPage() {
             </div>
             <div className="order-first md:order-last">
               <Image
-              src="/images/land3.png"
+              src="/images/land3.webp"
                 alt="Business handshake"
                 width={600}
                 height={400}
@@ -90,7 +90,7 @@ export default function LandlordsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2">
               <div className="order-last p-6 md:order-first">
                 <Image
-              src="/images/land4.png"
+              src="/images/land4.webp"
                   alt="Handshake"
                   width={600}
                   height={400}

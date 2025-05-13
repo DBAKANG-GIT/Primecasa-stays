@@ -1,5 +1,6 @@
 import Image from "next/image"
-import Button from "../component/atom/Button"
+import Button from "../component/ui/Button"
+import Link from "next/link"
 export default function AboutPage() {
   return (
     <>
@@ -65,7 +66,7 @@ export default function AboutPage() {
       
                 <div className="mb-12 overflow-hidden rounded-lg">
                   <Image
-                    src="/images/house.png"
+                    src="/images/house.webp"
                     alt="Modern apartment buildings with balconies"
                     width={1000}
                     height={500}
@@ -73,16 +74,18 @@ export default function AboutPage() {
                   />
                 </div>
       
-                <Button className=" px-9 py-3 text-lg font-medium  ">
+             
+             <Link href="/landlords" >  <Button className=" px-9 py-3 text-lg font-medium  ">
                   Explore
                 </Button>
+</Link>
               </div>
             </div>
           
           </section>
           <div
             className="h-[200px] bg-cover bg-center flex justify-center items-center"
-            style={{ backgroundImage: "url('/images/spiral.png')" }} // Replace with your background
+            style={{ backgroundImage: "url('/images/spiral.webp')" }} // Replace with your background
           >
             <div className="flex flex-col items-center  justify-center space-y-4">
               <p className="text-[#6B6B6B] lg:text-lg md:text-xl text-base  text-center font-medium">

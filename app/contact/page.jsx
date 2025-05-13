@@ -5,7 +5,7 @@ import { useState } from "react"
 import Link from "next/link"
 import CustomDatePicker from "../component/ui/datepicker"
 import { Calendar, Facebook, Instagram, Twitter } from "lucide-react"
-import Button from "@/app/component/atom/Button"
+import Button from "@/app/component/ui/Button"
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     firstName: "",

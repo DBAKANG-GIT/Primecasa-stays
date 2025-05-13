@@ -1,11 +1,31 @@
+'use client'
 import Image from "next/image";
-import Button from "./component/atom/Button";
+import Button from "./component/ui/Button";
 import ImageGallery from "./component/imageGallery";
 import FAQSection from "./component/ui/faq";
+import { useState } from "react";
 import Link from "next/link";
-import WaveBackgroundCanvas from "@/util";
-
 export default function Homes() {
+    const [isRedirecting, setIsRedirecting] = useState(false);
+
+const handleClick = () => {
+  setIsRedirecting(true);
+
+  // Open in new tab immediately
+
+  // Optionally show a confirmation or redirecting state
+  setTimeout(() => {
+      window.open(
+    'https://www.luxstayventures.com/book/brighton-bliss',
+    '_blank',
+    'noopener,noreferrer'
+  );
+
+    setIsRedirecting(false); // Reset or navigate away if needed
+  }, 5000);
+};
+
+
   return (
     <main className="min-h-screen  flex flex-col justify-center w-full overflow-hidden bg-white">
       {/* Background pattern */}
@@ -23,7 +43,7 @@ export default function Homes() {
         </div>
       </div> */}
 
-      <div   style={{ backgroundImage: "url('/images/spiral.png')" }} // Replace with your background
+      <div   style={{ backgroundImage: "url('/images/spiral.webp')" }} // Replace with your background
        className="z-10 mx-auto max-w-[86rem] px-4  pt-[8rem] lg:py-2 sm:px-6 lg:px-3">
         <div className="flex flex-col lg:flex-row items-center lg:items-start justify-center lg:justify-between gap-12">
           {/* Left content - Text and button */}
@@ -35,9 +55,14 @@ export default function Homes() {
               tailored for your needs.
             </h1>
             <div className="mt-8  w-full  ">
+              <a
+  href="https://www.luxstayventures.com/book/brighton-bliss"
+  target="_blank"
+  rel="noopener noreferrer">
               <Button className="shadow-lg w-full md:w-1/3 lg:w-1/3  px-12 lg:px-8 py-2 lg:py-3 font-medium text-slate-800 transition-colors hover:bg-amber-400">
-                Get Started
+                Book now 
               </Button>
+              </a>
             </div>
           </div>
 
@@ -131,11 +156,30 @@ export default function Homes() {
             <span className="text-lg text-slate-700">Fully Furnished Spaces</span>
           </div>
 
-          <div className="mt-12">
-            <Button className="bg-amber-400 px-8 py-2 text-base font-medium text-slate-800 hover:bg-amber-500">
-              Explore
-            </Button>
+         <div className="mt-12 text-center">
+   
+
+      {/* Fullscreen Blocking Overlay */}
+      <div className="mt-12 text-center">
+      <Button
+        onClick={handleClick}
+        className="bg-amber-400 px-8 py-2 text-base font-medium text-slate-800  rounded"
+      >
+        Explore
+      </Button>
+
+      {isRedirecting && (
+        <div className="fixed inset-0 z-50 bg-[#000000d9] backdrop-blur-sm flex flex-col items-center justify-center text-white">
+          <p className="text-xl mb-6">Redirecting to our sister page...</p>
+          <div className="flex space-x-2">
+            <span className="w-3 h-3 bg-white rounded-full animate-bounce [animation-delay:0s]"></span>
+            <span className="w-3 h-3 bg-secondary rounded-full animate-bounce [animation-delay:0.2s]"></span>
+            <span className="w-3 h-3 bg-white rounded-full animate-bounce [animation-delay:0.4s]"></span>
           </div>
+        </div>
+      )}
+    </div>
+    </div>
         </div>
       </div>
     </section>
@@ -218,8 +262,7 @@ Features
                               </div>
                 <h3 className="text-xl font-semibold text-slate-800">Leisure Stays</h3>
                 <p className="text-slate-600 text-center lg:text-left">
-                  Donec sit amet libero laoreet quam facilisis tempor. Quisque lacinia, felis eu varius faucibus
-                </p>
+              Unwind and recharge in style. Our serviced accommodations offer the perfect setting for holidays, weekend getaways, or relaxing escapes.”     </p>
               </div>
 
               {/* Relocation Stays */}
@@ -245,7 +288,7 @@ Features
     </section>
 
     {/* faq */}
-    <section className="w-full mt-[5rem] flex flex-col items-center justify-center ">
+    <section className="w-full mt-[5rem] hidden  flex-col items-center justify-center ">
       <button className="border-[#C7BBA8] hidden  border-[1px] font-[500] lg:flex justify-center items-center gap-2 px-4 py-2 rounded-md ">
         <div className="relative h-5 w-5 ">
           <Image
@@ -273,7 +316,7 @@ Features
 
           <div className="mb-12 overflow-hidden rounded-lg">
             <Image
-              src="/images/house.png"
+              src="/images/house.webp"
               alt="Modern apartment buildings with balconies"
               width={1000}
               height={500}
@@ -294,7 +337,7 @@ Features
 
     <div
             className="h-[200px] bg-cover bg-center flex justify-center items-center"
-            style={{ backgroundImage: "url('/images/spiral.png')" }} // Replace with your background
+            style={{ backgroundImage: "url('/images/spiral.webp')" }} // Replace with your background
           >
             <div className="flex flex-col items-center  justify-center space-y-4">
               <p className="text-[#6B6B6B] lg:text-lg md:text-xl text-base  text-center font-medium">

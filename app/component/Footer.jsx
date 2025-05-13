@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
-import Button from "./atom/Button"
+import Button from "./ui/Button"
 
 export default function SiteFooter() {
   const [email, setEmail] = useState("")
@@ -26,20 +26,19 @@ export default function SiteFooter() {
                 <img src="/icons/footerlogo.svg" alt="PrimeCasa Logo" className="h-12" />
             </div>
             <p className="mb-6  text-center lg:text-start max-w-md text-[#A2A2A2] mx-auto lg:mx-0">
-                Lorem ipsum dolor jnskjbichcbicwdicbskcdjjhc jdhcbidjckdckdcdjcdkjc bjdhcn dcnidc icdilc nkdjcdcidciwcdbu wixo
-            </p>
+Discover a better way to stay. At Prime Casa Stay, we blend comfort, convenience, and style to create memorable experiences—whether you're visiting for work, leisure, or a longer retreat.            </p>
 
             <div className="mb-8 flex space-x-6 justify-center lg:justify-start">
-                <Link href="https://twitter.com" aria-label="Twitter">
+                <Link href="#" aria-label="Twitter">
                     <img src="/icons/twitter.svg" alt="Twitter" className="h-6 w-6" />
                 </Link>
-                <Link href="https://instagram.com" aria-label="Instagram">
+                <Link href="#" aria-label="Instagram">
                     <img src="/icons/instagram.svg" alt="Instagram" className="h-6 w-6" />
                 </Link>
-                <Link href="https://tiktok.com" aria-label="TikTok">
+                <Link href="#" aria-label="TikTok">
                     <img src="/icons/tiktok.svg" alt="TikTok" className="h-6 w-6" />
                 </Link>
-                <Link href="https://medium.com" aria-label="Medium">
+                <Link href="#" aria-label="Medium">
                     <img src="/icons/meduim.svg" alt="Medium" className="h-6 w-6" />
                 </Link>
             </div>
@@ -50,11 +49,13 @@ export default function SiteFooter() {
               <ul className="space-y-2 text-center  lg:text-left">
                 <li><Link href="/" className="text-gray-300 hover:text-white">Home</Link></li>
                 <li><Link href="/about" className="text-gray-300 hover:text-white">About us</Link></li>
-                <li><Link href="/properties" className="text-gray-300 hover:text-white">Properties</Link></li>
+                {/* <li><Link href="/properties" className="text-gray-300 hover:text-white">Properties</Link></li> */}
                 <li><Link href="/contact" className="text-gray-300 hover:text-white">Contact</Link></li>
               </ul>
             </div>
-            <div>
+          
+          </div>
+  <div>
               <h3 className="mb-4  text-2xl  text-center lg:text-start text-[#F9DABB] lg:text-2xl font-semibold">Stay in contact</h3>
               <ul className="space-y-2 text-sm">
                 <li className="flex gap-2"> 
@@ -71,9 +72,7 @@ export default function SiteFooter() {
                 </li>
               </ul>
             </div>
-          </div>
-
-                  <div className="w-full flex   lg:flex flex-col items-center  md:hidden ">
+                  {/* <div className="w-full   hidden flex-col items-center  md:hidden ">
                     <div className="rounded-lg max-w-md mx-auto lg:mx-0">
                       <h3 className="mb-4 text-center text-2xl  text-[#F9DABB] lg:text-2xl  lg:w-[19rem] font-semibold">Subscribe now to the newsletter</h3>
                       <form onSubmit={handleSubscribe}>
@@ -107,47 +106,13 @@ export default function SiteFooter() {
                         </Button>
                       </form>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* Divider */}
                  
-        <div className="my-8 border-t w-full border-[1px] border-[#4B5563]"></div>
- <div className="w-full md:flex  lg:hidden flex-col items-center  hidden my-8  ">
-                    <div className="rounded-lg max-w-md mx-auto lg:mx-0">
-                      <h3 className="mb-4 text-center text-xl  text-[#F9DABB] lg:text-2xl  lg:w-[19rem] font-semibold">Subscribe now to the newsletter</h3>
-                      <form onSubmit={handleSubscribe}>
-                        <div className="mb-4">
-                          <input
-                            type="email"
-                            placeholder="Enter your email address"
-                            className="w-full rounded-md border border-[#9E9E9E] bg-transparent  h-[3rem] px-3 py-2 text-white placeholder:text-[#666666]"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
-                            required
-                          />
-                        </div>
-                        <div className="mb-4 hidden  lg:flex items-center space-x-2">
-                          <input
-                            type="checkbox"
-                            id="consent"
-                            checked={consent}
-                            onChange={(e) => setConsent(e.target.checked)}
-  className="h-5 w-5 rounded border-[#9E9E9E] bg-transparent checked:bg-[#333366] checked:border-transparent focus:ring-2 focus:ring-[#333366] border-solid border-[1px] appearance-none"
-                          />
-                          <label htmlFor="consent" className="text-sm text-gray-300">
-                            I consent the privacy policy
-                          </label>
-                        </div>
-                        <Button
-                          type="submit"
-                          className="w-full  px-4 py-2 font-medium"
-                        >
-                          Subscribe
-                        </Button>
-                      </form>
-                    </div>
-                  </div>
+        {/* <div className="my-8 border-t w-full border-[1px] border-[#4B5563]"></div> */}
+÷
         {/* Bottom Row */}
         <div className="flex flex-col-reverse md:flex-row justify-center md:justify-between items-center text-sm text-gray-400">
           <div className="text-sm lg:text-base my-2 lg:my-0">PrimeCasa Stay © 2025. All rights reserved.</div>

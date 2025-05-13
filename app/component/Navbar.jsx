@@ -34,7 +34,9 @@ export default function Navbar() {
           </li>
           <li>
             <Link
-              href="/book"
+              href="https://www.luxstayventures.com/book/brighton-bliss"
+  target="_blank"
+  rel="noopener noreferrer"
               className="bg-secondary  flex items-center  justify-center text-white    text-base px-3 py-2 rounded-md hover:opacity-90 transition"
             >
               Book Now

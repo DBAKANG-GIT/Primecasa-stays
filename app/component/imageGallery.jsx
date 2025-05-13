@@ -11,7 +11,7 @@ export default function ImageGallery() {
                     {/* Top-right image */}
                     <div className="absolute top-4 z-[111] right-0 hidden lg:block">
                         <img
-                            src="/images/sprinkler.png"
+                            src="/images/sprinkler.webp"
                             alt="Decorative top-right image"
                             className="h-auto object-cover"
                         />
@@ -24,14 +24,14 @@ export default function ImageGallery() {
                             <div className="flex flex-col gap-2 items-end">
                                 <div className="overflow-hidden  w-1/2 rounded-lg ">
                                     <img
-                                        src="/images/image1.png"
+                                        src="/images/image1.webp"
                                         alt="Building exterior view"
                                         className=" md:max-w-[180px] h-auto object-cover"
                                     />
                                 </div>
                                 <div className="overflow-hidden w-1/2  rounded-lg ">
                                     <img
-                                        src="/images/image2.png"
+                                        src="/images/image2.webp"
                                         alt="Building architecture"
                                         className="md:max-w-[180px] h-auto object-cover"
                                     />
@@ -39,7 +39,7 @@ export default function ImageGallery() {
                             </div>
                             <div className="overflow-hidden item-end flex rounded-lg ">
                                 <img
-                                    src="/images/image4.png"
+                                    src="/images/image4.webp"
                                     alt="Living room with blue sofa"
                                     className=" h-auto object-cover"
                                 />
@@ -50,14 +50,14 @@ export default function ImageGallery() {
                         <div className="flex flex-col gap-2 h-full">
                             <div className="overflow-hidden rounded-lg ">
                                 <img
-                                    src="/images/image3.png"
+                                    src="/images/image3.webp"
                                     alt="Luxury room interior"
                                     className="w-full h-[12rem] sm:h-[16rem] md:h-[20rem] lg:h-[30rem] object-cover"
                                 />
                             </div>
                             <div className="overflow-hidden rounded-lg  flex-1">
                                 <img
-                                    src="/images/image5.png"
+                                    src="/images/image5.webp"
                                     alt="Modern living space"
                                     className="w-full h-full object-cover"
                                 />
